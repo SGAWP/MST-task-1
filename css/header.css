@@ -1,0 +1,181 @@
+.header {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  background-color: var(--bg-2);
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 10vh 10vh;
+  position: relative;
+  top: 0;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out, padding 0.3s;
+}
+
+.header-wrapper.sticky {
+  position: fixed;
+  background-color: rgba(40, 40, 41, .8);
+  padding: 2vh;
+  z-index: 999;
+}
+
+.header-wrapper.sticky .header-nav{
+  font-size: calc(5px + 1vw);
+}
+
+.header-title {
+  font-size: calc(5px + 2vw);
+  font-family: 'Prata';
+  text-align: center;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 400px;
+}
+
+.header-nav {
+  font-size: calc(5px + 0.5vw);
+  font-family: 'Arial Italic';
+  text-transform: uppercase;
+}
+
+.nav-item {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  color: var(--white);
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+
+.nav-item:hover {
+  background-size: 100% 2px;
+}
+
+.header-nav .nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.header-description {
+  padding: 0 5vh 10vh 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-description h1 {
+  font-family: 'Prata';
+  font-weight: normal;
+  line-height: 1.2;
+  font-size: calc(5px + 4vw);
+}
+
+.header-description p {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-transform: lowercase;
+  font-size: calc(5px + 2vw);
+}
+
+.advantage-item {
+  text-transform: lowercase;
+  align-items: center;
+  font-size: calc(5px + 1vw);
+  margin-bottom: 10px;
+  max-width: 100%; 
+  line-height: 2;
+}
+
+.advantage-item span {
+  font-family: 'Prata';
+  font-size: calc(5px + 1.5vw);
+  flex-wrap: wrap;
+}
+
+.advantage-item img.icon {
+  vertical-align: middle;
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/images/company.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.btn-header {
+  font-size: calc(5px + 1vw);
+}
+
+@media (max-width: 768px) {
+  .header {
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+
+  .header-content {
+    z-index: 2;
+  }
+  
+  .header-wrapper.sticky .header-nav{
+    font-size: calc(5px + 3vw);
+  }
+
+  .header-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 3vh 3vh 0 3vh;
+  }
+
+  .header-title {
+    font-size: calc(8px + 3vw);
+  }
+
+  .header-nav {
+    font-size: calc(8px + 1.5vw);
+  }
+
+  .header-description {
+    padding: 7vh;
+  }
+
+  .header-description p {
+    font-size: calc(5px + 3vw);
+  }
+  
+  .header-image {
+    position: absolute;
+    opacity: 0.2;
+  }
+
+  .advantage-item {
+    font-size: calc(5px + 3vw);
+  }
+  
+  .advantage-item span {
+    font-size: calc(5px + 4vw);
+  }
+
+  .btn-header {
+    padding: 20px;
+    font-size: calc(5px + 2vw);
+  }
+  
+}
+

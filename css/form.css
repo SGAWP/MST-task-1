@@ -1,0 +1,128 @@
+.forms {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.form-container {
+  display: flex;
+  width: 90%;
+  background: white;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-content {
+  padding: 40px;
+}
+
+.form-content h2 {
+  font-size: calc(5px + 1.5vw);
+  margin-bottom: 20px;
+  color: var(--bg-2);
+}
+
+.form-content input {
+  padding: 10px;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+}
+
+.form-content .checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-content button {
+  width: 100%;
+  padding: 12px;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: calc(5px + 1vw);
+}
+
+.form-image {
+  position: relative;
+  flex: 1;
+  background: url('../assets/images/meeting-room.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.form-input {
+  width: 100%;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 15px;
+  padding: 10px;
+  outline: none;
+}
+
+.btn-form {
+  margin-top: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.form-label {
+  font-size: calc(5px + 1vw);
+  color: var(--black);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1450px) {
+  .form-image {
+    display: none;
+  }
+
+  .form-container {
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .form-content h2 {
+    font-size: calc(5px + 3vw);
+    text-align: center;
+  }
+
+  .form-content {
+    padding: 0;
+  }
+
+  .form-label {
+    font-size: calc(5px + 2vw);
+  }
+
+}
